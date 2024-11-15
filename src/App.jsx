@@ -1,5 +1,6 @@
 
 import Portfolio from './pages/PortfolioV2'
+import Enhance from './pages/enhanced-portfolio'
 import { Analytics } from '@vercel/analytics/react';
 
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <div>
       <Analytics />
-      <Portfolio />
+      <Enhance />
     </div>
     
   )
