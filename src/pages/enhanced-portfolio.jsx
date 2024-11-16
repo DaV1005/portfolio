@@ -239,7 +239,7 @@ export default function Portfolio() {
           </h1>
           <p className="text-2xl mb-8 text-purple-200 animate-fade-in-up">Software Developer</p>
           <p className="max-w-2xl mx-auto text-gray-300 animate-fade-in">
-            Passionate about creating innovative solutions and pushing the boundaries of technology.
+            Hey, I&apos;m David! A Web Developer Crafting Cool, User-Friendly Projects with React, Node.js, and More
           </p>
           <a href="#about" className="mt-8 inline-block animate-bounce">
             <ChevronDown className="w-8 h-8 text-teal-400" />
@@ -259,11 +259,12 @@ export default function Portfolio() {
                 My passion lies in creating efficient, scalable, and user-friendly applications that solve real-world problems.
               </p>
               <p className="text-lg mb-4 text-gray-300">
-                With a strong foundation in various programming languages and frameworks, I'm always eager to learn new technologies and apply them to innovative projects.
-                I thrive in collaborative environments and enjoy tackling complex challenges that push me to grow as a developer.
+                With a solid grasp of various programming languages and frameworks, 
+                I’m always excited to dive into new tech and apply it to creative projects. I love working with teams and tackling tough challenges that help me grow as a developer.
               </p>
               <p className="text-lg text-gray-300">
-                When I'm not coding, you can find me exploring new technologies, or enjoying outdoor activities to maintain a healthy work-life balance.
+                When I'm not coding, you’ll catch me spending time with my two dogs or exploring new tech. 
+                I also make sure to balance it all with some outdoor activities for a healthy work-life vibe.
               </p>
             </div>
           </div>
