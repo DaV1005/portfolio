@@ -3,7 +3,7 @@ import pet from '../assets/petPic.JPG?height=200&width=400';
 import pokemon from '../assets/pokePic.JPG?height=200&width=400';
 import expense from "../assets/expensePic.JPG?height=200&width=400";
 import openSource from "../assets/openSourcePic.JPG?height=200&width=400";
-
+import david from "../assets/david.jpg";
 
 import React, { useState, useEffect, useRef } from 'react'
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Book, BookText, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -252,7 +252,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">About Me</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* <Image src="/placeholder.svg?height=300&width=300" alt="David Viers" width={300} height={300} className="rounded-full border-4 border-teal-400" /> */}
+            <img src={david} alt="David Viers" className=" w-30 h-30 aspect-square object-none object-bottom  border-4 border-teal-400" />
             <div className="max-w-2xl">
               <p className="text-lg mb-4 text-gray-300">
                 I'm a Bachelor of Science in Computer Science graduate with hands-on experience in software development and web development.
