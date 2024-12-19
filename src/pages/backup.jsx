@@ -148,10 +148,10 @@ export default function Portfolio() {
   }
 
   return (
-    <div>
-
-      {/* Header */}
-      <header className="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-10 transition-all duration-300 ease-in-out">
+      <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-gray-100 min-h-screen relative">
+        
+        {/* Header */}
+        <header className="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-10 transition-all duration-300 ease-in-out">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">
               David Viers
@@ -187,13 +187,27 @@ export default function Portfolio() {
               ))}
             </nav>
           )}
-      </header>
+        </header>
 
-      {/* Hero */}
-      <div id='home'><ParticleBackground /></div>  
-      
 
-      <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-gray-100 min-h-screen relative">
+        {/* Hero Section */}
+        <section id="home" className="pt-32 pb-20 px-4 relative overflow-hidden min-h-screen flex items-center">
+          <div className="container mx-auto text-center relative z-10">
+            <h1 className="text-6xl font-bold mb-6 animate-fade-in-down">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-teal-500 to-indigo-500">
+                David Viers
+              </span>
+            </h1>
+            <p className="text-2xl mb-8 text-purple-200 animate-fade-in-up">Software Developer</p>
+            <p className="max-w-2xl mx-auto text-gray-300 animate-fade-in">
+              Hey, I&apos;m David! A Web Developer Crafting Cool, User-Friendly Projects with React, Node.js, and More
+            </p>
+            <a href="#about" className="mt-8 inline-block animate-bounce">
+              <ChevronDown className="w-8 h-8 text-teal-400" />
+            </a>
+          </div>
+        </section>
+
         {/* About Section */}
         <section id="about" className="py-20 bg-gray-900 bg-opacity-50 relative">
           <div className="container mx-auto px-4">
@@ -329,6 +343,5 @@ export default function Portfolio() {
           <p className="text-gray-400">&copy; 2024 David Viers. All rights reserved.</p>
         </footer>
       </div>
-    </div>
   )
 }
