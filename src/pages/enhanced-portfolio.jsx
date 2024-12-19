@@ -179,7 +179,7 @@ export default function Portfolio() {
                 <a
                   key={section}
                   href={`#${section}`}
-                  className="block py-2 hover:text-teal-400 transition-colors duration-300"
+                  className="block py-2 hover:text-teal-400 transition-colors duration-300 text-gray-300"
                   onClick={toggleMenu}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -193,7 +193,7 @@ export default function Portfolio() {
       <div id='home'><ParticleBackground /></div>  
       
 
-      <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-gray-100 min-h-screen relative">
+      <div className="bg-gradient-to-br from-black via-fuchsia-900 via-indigo-900 to-teal-800 text-gray-100 min-h-screen relative">
         {/* About Section */}
         <section id="about" className="py-20 bg-gray-900 bg-opacity-50 relative">
           <div className="container mx-auto px-4">

@@ -6,10 +6,10 @@ import Particles from './Particles'; // Ensure correct path
 
 const ParticleBackground = () => {
   return (
-    <section className=' relative overflow-hidden min-h-screen flex items-center h-[1vh]'>
+    <section className=' relative overflow-hidden min-h-screen grid-cols-1 items-center h-[1vh]'>
         <Canvas
         camera={{ position: [0, 0, 5] }} // Camera position
-        className="fixed top-0 left-0 w-full  -z-10 bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 "
+        className="fixed top-0 left-0 w-full  -z-10 bg-gradient-to-br from-black via-fuchsia-900 via-indigo-900 to-teal-800 "
         >
         {/* Ambient light for soft illumination */}
         <ambientLight intensity={0.2} />

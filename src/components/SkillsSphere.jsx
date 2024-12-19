@@ -45,7 +45,7 @@ function RotatingSphere() {
         onPointerEnter={(e)=>(e.stopPropagation(), setIsHovered(true))} 
         onPointerLeave={() => setIsHovered(false)}
       >
-        <meshBasicMaterial color={isHovered? "orange" : "white"} wireframe />
+        <meshBasicMaterial color={isHovered? "#ADFF2F" : "white"} wireframe />
         {skills.map((skill, index) => {
           // Calculate spherical coordinates
           const phi = Math.acos(-1 + (2 * index) / skills.length); // Latitude
