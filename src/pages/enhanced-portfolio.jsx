@@ -4,69 +4,16 @@ import pokemon from '../assets/pokePic.JPG?height=200&width=400';
 import expense from "../assets/expensePic.JPG?height=200&width=400";
 import openSource from "../assets/openSourcePic.JPG?height=200&width=400";
 import david from "../assets/david.jpg";
+import inventory from "../assets/inventory.JPG";
+
+import { RotatingSkillsSphere } from '../components/SkillsSphere'
+
+
 
 import React, { useState, useEffect, useRef } from 'react'
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Book, BookText, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react'
 // import Image from 'next/image'
 
-const AnimatedBackground = () => {
-  const canvasRef = useRef(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-
-    const particles = []
-    const particleCount = 100
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 2 + 1,
-        dx: (Math.random() - 0.5) * 2,
-        dy: (Math.random() - 0.5) * 2,
-      })
-    }
-
-    function animate() {
-      requestAnimationFrame(animate)
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-      particles.forEach((particle) => {
-        particle.x += particle.dx
-        particle.y += particle.dy
-
-        if (particle.x < 0 || particle.x > canvas.width) particle.dx *= -1
-        if (particle.y < 0 || particle.y > canvas.height) particle.dy *= -1
-
-        ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'
-        ctx.fill()
-      })
-    }
-
-    animate()
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-
-    window.addEventListener('resize', handleResize)
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-  return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full -z-10" />
-}
 
 const SkillCard = ({ icon: Icon, title, skills }) => (
   <div className="bg-gradient-to-br from-blue-800 to-teal-900 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 relative overflow-hidden group">
@@ -124,6 +71,18 @@ export default function Portfolio() {
   }, [])
 
   const projects = [
+    {
+      title: "Inventory Management System",
+      description: "Developed a full-stack inventory management system to streamline stock tracking and reporting, leveraging AWS services for scalability and reliability.",
+      technologies: " React, Node.js, AWS Amplify, AWS EC2, AWS RDS (Postgres)",
+      features: [
+        "Built and deployed a responsive frontend using React and AWS Amplify.",
+        "Designed RESTful APIs for real-time inventory management hosted on AWS EC2.",
+        "Configured AWS RDS for secure and efficient database management."
+      ],
+      website: "https://master.d2kiomxq0p73tg.amplifyapp.com/",
+      image: inventory
+    },
     {
       title: "Pet Matching Web Application",
       description: "A web app that helps users find their perfect pet match.",
@@ -188,7 +147,7 @@ export default function Portfolio() {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900 text-gray-100 min-h-screen relative">
-      <AnimatedBackground />
+      
 
       {/* Header */}
       <header className="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-10 transition-all duration-300 ease-in-out">
@@ -228,6 +187,7 @@ export default function Portfolio() {
           </nav>
         )}
       </header>
+
 
       {/* Hero Section */}
       <section id="home" className="pt-32 pb-20 px-4 relative overflow-hidden min-h-screen flex items-center">
@@ -273,8 +233,11 @@ export default function Portfolio() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">Technical Skills</h2>
+        <div className="container mx-auto px-4 ">         
+          <h2 className="text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">Technical Skills</h2>
+          <div>
+            <RotatingSkillsSphere />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <SkillCard
               icon={Code}
